@@ -1,6 +1,5 @@
-# TODO: Write documentation for `Shabal`
+require "./shabal/*"
+
 module Shabal
   VERSION = "0.1.0"
-
-  # TODO: Put your code here
 end
