@@ -1,0 +1,11 @@
+name: shabal
+version: 0.1.0
+
+authors:
+  - zyzzyva <zyzzyva99@gmail.com>
+
+description: A Crystal wrapper for libshabal, a low-level native lib for BURST and other PoC2-based cryptocurrencies.
+
+crystal: 0.35.0
+
+license: GPL-3.0
