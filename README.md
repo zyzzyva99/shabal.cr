@@ -1,10 +1,12 @@
 # shabal.cr
 
-A Crystal wrapper for [libshabal](https://github.com/burst-apps-team/libShabal), an optimized native library containing utility and encryption code used with BURST and other PoC2-based cryptocurrencies.
+Crystal bindings for [libshabal](https://github.com/burst-apps-team/libShabal), an optimized native library containing utility and encryption code used with BURST and other PoC2-based cryptocurrencies.
 
 ## Installation
 
-1. Add the dependency to your `shard.yml`:
+1. Install the latest libshabal binaries for your OS from [the libshabal releases page](https://github.com/burst-apps-team/libShabal/releases) if you don't already have them.
+
+2. Add the dependency to your `shard.yml`:
 
    ```yaml
    dependencies:
@@ -12,7 +14,7 @@ A Crystal wrapper for [libshabal](https://github.com/burst-apps-team/libShabal),
        github: zyzzyva99/shabal
    ```
 
-2. Run `shards install`
+3. Run `shards install`
 
 ## Usage
 
@@ -20,11 +22,15 @@ A Crystal wrapper for [libshabal](https://github.com/burst-apps-team/libShabal),
 require "shabal"
 ```
 
-TODO: Write usage instructions here
+See the specs for some examples. I'll be adding wrapper classes in the future so you don't have to mess around with pointers directly.
+
+## Supported C Functions
+
+All of them! See https://github.com/zyzzyva99/shabal.cr/blob/master/src/shabal/lib_shabal.cr for the list.
 
 ## Development
 
-TODO: Write development instructions here
+You don't need anything special to work on this project, besides Crystal >= 0.35.0 and libshabal >= 1.4.1.
 
 ## Contributing
 
@@ -37,3 +43,8 @@ TODO: Write development instructions here
 ## Contributors
 
 - [zyzzyva](https://github.com/zyzzyva99) - creator and maintainer
+
+## Donations
+
+- BHD: 3LzrYwnUu6taMsUkRyTgkjZG75nG7gfR7B
+- BURST: BURST-ZYZZ-5MDK-8A4D-3JY5Y
