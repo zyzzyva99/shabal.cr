@@ -1,14 +1,12 @@
 module Shabal
   @[Link("shabal")]
   lib LibShabal
-    type UIntPtrT = LibC::ULong
-
     fun create_plot(
       account_id : UInt64,
       nonce : UInt64,
       poc_version : UInt8,
       plot_buffer : UInt8*,
-      plot_buffer_offset : UIntPtrT
+      plot_buffer_offset : LibC::ULong
     ) : Void
     fun create_plots(
       account_id : UInt64,
@@ -16,7 +14,7 @@ module Shabal
       nonce_count : UInt64,
       poc_version : UInt8,
       plot_buffer : UInt8*,
-      plot_buffer_offset : UIntPtrT
+      plot_buffer_offset : LibC::ULong
     ) : Void
     fun create_scoop(
       account_id : UInt64,
@@ -24,7 +22,7 @@ module Shabal
       scoop : UInt32,
       poc_version : UInt8,
       sccop_buffer : UInt8*,
-      sccop_buffer_offset : UIntPtrT
+      sccop_buffer_offset : LibC::ULong
     ) : Void
 
     fun curve25519_get_public_key(private_key : UInt8*, public_key : UInt8*) : Void
@@ -49,14 +47,14 @@ module Shabal
     fun libshabal_version : UInt8*
 
     fun shabal256_destroy(shabal : Void*) : Void
-    fun shabal256_digest(shabal : Void*, buffer : UInt8*, offset : UIntPtrT) : Void
+    fun shabal256_digest(shabal : Void*, buffer : UInt8*, offset : LibC::ULong) : Void
     fun shabal256_new : Void*
     fun shabal256_reset(shabal : Void*) : Void
     fun shabal256_update(
       shabal : Void*,
       data : UInt8*,
-      offset : UIntPtrT,
-      len : UIntPtrT
+      offset : LibC::ULong,
+      len : LibC::ULong
     ) : Void
 
     fun shabal_findBestDeadline(
